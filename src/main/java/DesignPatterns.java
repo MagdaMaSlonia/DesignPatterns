@@ -1,15 +1,24 @@
 import AbstractFactorypattern.AbstractFactory;
 import FactoryPattern.Shape;
 import FactoryPattern.ShapeFactory;
+import Singleton.Singleton;
 
 public class DesignPatterns {
 
     public static void main(String[] args){
 
         //useFactory();
-        useAbstractFactory();
+        //useAbstractFactory();
+        useSingleton();
 
 
+    }
+
+    private static void useSingleton() {
+        //Singleton singleObject = new Singleton.Singleton(); <= it dosn't work!
+
+        Singleton singleObject = Singleton.getSinleton();
+        singleObject.msg();
     }
 
     public static void useAbstractFactory() {
