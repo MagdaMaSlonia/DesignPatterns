@@ -1,8 +1,10 @@
+package Builder;
 
-public class Coke extends ColdDrink {
+
+public class Pepsi extends ColdDrink {
     @Override
     public String name() {
-        return "Coke Cola";
+        return "Pepsi";
     }
 
     @Override
