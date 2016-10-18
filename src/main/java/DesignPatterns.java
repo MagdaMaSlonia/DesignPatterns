@@ -3,7 +3,10 @@ import Builder.Meal;
 import Builder.MealBuilder;
 import FactoryPattern.Shape;
 import FactoryPattern.ShapeFactory;
+import Prototype.ShapeCash;
+import Prototype.Shapes;
 import Singleton.Singleton;
+
 
 public class DesignPatterns {
 
@@ -12,8 +15,26 @@ public class DesignPatterns {
         //useFactory();
         //useAbstractFactory();
         //useSingleton();
-        useBuilderPattern();
+        //useBuilderPattern();
 
+        usePrototypePattern();
+
+
+    }
+
+    private static void usePrototypePattern() {
+
+        ShapeCash.loadCache();
+
+        Shapes clonedShape = ShapeCash.getShape("1");
+
+        System.out.println("Prototype.Shapes : " + clonedShape.getType());
+
+        Shapes clonedShape2 = ShapeCash.getShape("2");
+        System.out.println("Prototype.Shapes : " + clonedShape2.getType());
+
+        Shapes clonedShape3 = ShapeCash.getShape("3");
+        System.out.println("Prototype.Shapes : " + clonedShape3.getType());
 
     }
 
