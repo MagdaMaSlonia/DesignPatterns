@@ -9,8 +9,27 @@ public class DesignPatterns {
 
         //useFactory();
         //useAbstractFactory();
-        useSingleton();
+        //useSingleton();
+        useBuilderPattern();
 
+
+    }
+
+    private static void useBuilderPattern() {
+
+        MealBuilder meal = new MealBuilder();
+
+        Meal vegMeal = meal.preaperVegBurger();
+
+        System.out.println("Vege meal: ");
+        vegMeal.getCost();
+        vegMeal.showItems();
+
+        Meal meatMeal = meal.preaperMeatMeal();
+
+        System.out.println("Meat meal: ");
+        meatMeal.getCost();
+        meatMeal.showItems();
 
     }
 
