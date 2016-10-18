@@ -1,4 +1,5 @@
 import AbstractFactorypattern.AbstractFactory;
+import AdapterPattern.AudioPlayer;
 import Builder.Meal;
 import Builder.MealBuilder;
 import FactoryPattern.Shape;
@@ -16,10 +17,19 @@ public class DesignPatterns {
         //useAbstractFactory();
         //useSingleton();
         //useBuilderPattern();
+        //usePrototypePattern();
+        useAdapter();
 
-        usePrototypePattern();
 
+    }
 
+    private static void useAdapter() {
+        AudioPlayer audioPlayer = new AudioPlayer();
+
+        audioPlayer.play("mp3", "beyond the horizon.mp3");
+        audioPlayer.play("mp4", "alone.mp4");
+        audioPlayer.play("vlc", "far far away.vlc");
+        audioPlayer.play("avi", "mind me.avi");
     }
 
     private static void usePrototypePattern() {
